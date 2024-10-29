@@ -108,7 +108,7 @@ def make(robot="IIWA", obj="Box", obstacle=None,
     )
 
     env.reset()
-    return GymWrapper(env)
+    return GymWrapper(env, use_camera_obs=use_camera_obs)
 
 
 def sample_tasks(experiment_type='default', num_train=1,
